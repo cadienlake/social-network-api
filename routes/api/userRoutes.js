@@ -1,15 +1,7 @@
 // require express router
 const router = require("express").Router();
 // require the userController from the controllers folder and destructure the methods
-const {
-  getUsers,
-  getSingleUser,
-  createUser,
-  updateUser,
-  removeUser,
-  addFriend,
-  removeFriend,
-} = require("../../controllers/userController");
+const { getUsers, getSingleUser, createUser, updateUser, removeUser, addFriend, removeFriend } = require("../../controllers/userController");
 
 // define the /api/users routes and their methods (GET, POST)
 router.route("/").get(getUsers).post(createUser);
